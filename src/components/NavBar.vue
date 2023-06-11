@@ -1,7 +1,7 @@
 <template>
   <!-- Código doc bootstrap para edição -->
-  <header class="navbar navbar-expand-lg navbar-dark bg-black">
-    <div class="container-fluid">
+  <header class="navbar navbar-expand-md navbar-dark bg-black">
+    <div class="container-fluid container-lg">
       <a class="navbar-brand" href="#">
         <img src="@/assets/images/logo/logo_white.png" alt="" aria-hidden="true" />
       </a>
@@ -19,7 +19,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
