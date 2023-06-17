@@ -1,7 +1,10 @@
 <template>
   <h2 class="text-center">Busque por categoria:</h2>
-  <section class="container row">
-    <div class="col-6">
+  <section class="container row mx-auto g-4">
+    <!-- Em tela mobile, cada div ocupa 6 colunas (12/6 = 2 divs por row) -->
+    <!-- Em tela tablet, cada div ocupa 4 colunas (12/4 = 3 divs por row) -->
+    <!-- Em tela desktop, cada div ocupa 2 colunas (12/2 = 6 divs por row) -->
+    <div class="col-6 col-md-4 col-xxl-2">
       <div class="card">
         <img
           src="@/assets/images/categories/camiseta.png"
@@ -14,7 +17,7 @@
       </div>
     </div>
 
-    <div class="col-6">
+    <div class="col-6 col-md-4 col-xxl-2">
       <div class="card">
         <img
           src="@/assets/images/categories/bolsa.png"
@@ -27,7 +30,7 @@
       </div>
     </div>
 
-    <div class="col-6">
+    <div class="col-6 col-md-4 col-xxl-2">
       <div class="card">
         <img
           src="@/assets/images/categories/calcados.png"
@@ -40,7 +43,7 @@
       </div>
     </div>
 
-    <div class="col-6">
+    <div class="col-6 col-md-4 col-xxl-2">
       <div class="card">
         <img
           src="@/assets/images/categories/calca.png"
@@ -53,7 +56,7 @@
       </div>
     </div>
 
-    <div class="col-6">
+    <div class="col-6 col-md-4 col-xxl-2">
       <div class="card">
         <img
           src="@/assets/images/categories/casacos.png"
@@ -66,7 +69,7 @@
       </div>
     </div>
 
-    <div class="col-6">
+    <div class="col-6 col-md-4 col-xxl-2">
       <div class="card">
         <img
           src="@/assets/images/categories/oculos.png"
