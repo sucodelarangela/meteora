@@ -35,12 +35,12 @@
         </ul>
         <form class="d-flex">
           <input
-            class="form-control me-2"
+            class="form-control me-2 rounded-0"
             type="search"
             placeholder="Digite o produto"
             aria-label="Buscar produto"
           />
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
+          <button class="btn btn-outline-light rounded-0" type="submit">Buscar</button>
         </form>
       </div>
     </div>
