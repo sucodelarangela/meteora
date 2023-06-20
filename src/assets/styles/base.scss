@@ -13,3 +13,10 @@ body {
   transition: 0.3s;
   font-family: $inter;
 }
+
+.section-title {
+  font-size: 1.75rem;
+  @media screen and (min-width: 1200px) {
+    font-size: 2rem;
+  }
+}
