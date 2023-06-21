@@ -1,10 +1,10 @@
 <template>
-  <h2 class="text-center">Produtos que estão bombando:</h2>
+  <h2 class="text-center my-4 section-title">Produtos que estão bombando!</h2>
   <section class="container row mx-auto g-4 px-3">
     <!-- Em tela mobile, cada div ocupa 6 colunas (12/6 = 2 divs por row) -->
     <!-- Em tela tablet, cada div ocupa 4 colunas (12/4 = 3 divs por row) -->
     <!-- Em tela desktop, cada div ocupa 2 colunas (12/2 = 6 divs por row) -->
-    <div class="col-12 col-md-6 col-xxl-4">
+    <div class="col-12 col-md-6 col-xl-4">
       <div class="card">
         <img
           src="@/assets/images/card_imgs/camiseta.png"
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6 col-xxl-4">
+    <div class="col-12 col-md-6 col-xl-4">
       <div class="card">
         <img src="@/assets/images/card_imgs/bolsa.png" class="card-img-top" alt="Produto bolsas" />
         <div class="card-body">
@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6 col-xxl-4">
+    <div class="col-12 col-md-6 col-xl-4">
       <div class="card">
         <img
           src="@/assets/images/card_imgs/calcados.png"
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6 col-xxl-4">
+    <div class="col-12 col-md-6 col-xl-4">
       <div class="card">
         <img src="@/assets/images/card_imgs/calca.png" class="card-img-top" alt="Produto calças" />
         <div class="card-body">
@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6 col-xxl-4">
+    <div class="col-12 col-md-6 col-xl-4">
       <div class="card">
         <img
           src="@/assets/images/card_imgs/casacos.png"
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6 col-xxl-4">
+    <div class="col-12 col-md-6 col-xl-4">
       <div class="card">
         <img src="@/assets/images/card_imgs/oculos.png" class="card-img-top" alt="Produto óculos" />
         <div class="card-body">
