@@ -1,6 +1,6 @@
 <template>
   <h2 class="text-center my-4 section-title">Produtos que estão bombando!</h2>
-  <section class="container row mx-auto g-4 px-3">
+  <section class="container row mx-auto g-4 px-3 mb-4">
     <!-- Em tela mobile, cada div ocupa 6 colunas (12/6 = 2 divs por row) -->
     <!-- Em tela tablet, cada div ocupa 4 colunas (12/4 = 3 divs por row) -->
     <!-- Em tela desktop, cada div ocupa 2 colunas (12/2 = 6 divs por row) -->
