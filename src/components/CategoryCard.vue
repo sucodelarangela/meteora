@@ -1,14 +1,14 @@
 <template>
-  <h2 class="text-center my-4 section-title">Busque por categoria:</h2>
+  <h2 class="text-center my-4 my-xl-5 section-title">Busque por categoria:</h2>
   <section class="container row mx-auto g-4 mb-4">
     <!-- Em tela mobile, cada div ocupa 6 colunas (12/6 = 2 divs por row) -->
     <!-- Em tela tablet, cada div ocupa 4 colunas (12/4 = 3 divs por row) -->
     <!-- Em tela desktop, cada div ocupa 2 colunas (12/2 = 6 divs por row) -->
     <div class="col-6 col-md-4 col-xl-2">
-      <div class="card">
+      <div class="card rounded-0 border-0">
         <img
           src="@/assets/images/categories/camiseta.png"
-          class="card-img-top"
+          class="card-img-top rounded-0"
           alt="Categoria camisetas"
         />
         <div class="card-header bg-black text-bg-dark">
@@ -18,10 +18,10 @@
     </div>
 
     <div class="col-6 col-md-4 col-xl-2">
-      <div class="card">
+      <div class="card rounded-0 border-0">
         <img
           src="@/assets/images/categories/bolsa.png"
-          class="card-img-top"
+          class="card-img-top rounded-0"
           alt="Categoria bolsas"
         />
         <div class="card-header bg-black text-bg-dark">
@@ -31,10 +31,10 @@
     </div>
 
     <div class="col-6 col-md-4 col-xl-2">
-      <div class="card">
+      <div class="card rounded-0 border-0">
         <img
           src="@/assets/images/categories/calcados.png"
-          class="card-img-top"
+          class="card-img-top rounded-0"
           alt="Categoria calçados"
         />
         <div class="card-header bg-black text-bg-dark">
@@ -44,10 +44,10 @@
     </div>
 
     <div class="col-6 col-md-4 col-xl-2">
-      <div class="card">
+      <div class="card rounded-0 border-0">
         <img
           src="@/assets/images/categories/calca.png"
-          class="card-img-top"
+          class="card-img-top rounded-0"
           alt="Categoria calças"
         />
         <div class="card-header bg-black text-bg-dark">
@@ -57,10 +57,10 @@
     </div>
 
     <div class="col-6 col-md-4 col-xl-2">
-      <div class="card">
+      <div class="card rounded-0 border-0">
         <img
           src="@/assets/images/categories/casacos.png"
-          class="card-img-top"
+          class="card-img-top rounded-0"
           alt="Categoria casacos"
         />
         <div class="card-header bg-black text-bg-dark">
@@ -70,10 +70,10 @@
     </div>
 
     <div class="col-6 col-md-4 col-xl-2">
-      <div class="card">
+      <div class="card rounded-0 border-0">
         <img
           src="@/assets/images/categories/oculos.png"
-          class="card-img-top"
+          class="card-img-top rounded-0"
           alt="Categoria óculos"
         />
         <div class="card-header bg-black text-bg-dark">

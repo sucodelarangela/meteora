@@ -1,6 +1,8 @@
 <template>
-  <section class="pb-4 bg-black text-bg-dark">
-    <h2 class="section-title text-center fw-medium py-4">Conheça todas as nossas facilidades</h2>
+  <section class="pb-4 pb-lg-5 bg-black text-bg-dark">
+    <h2 class="section-title text-center fw-medium py-4 py-xl-5">
+      Conheça todas as nossas facilidades
+    </h2>
     <div
       class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-4 gap-lg-5 px-4"
     >

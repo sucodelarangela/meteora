@@ -1,14 +1,14 @@
 <template>
-  <h2 class="text-center my-4 section-title">Produtos que estão bombando!</h2>
+  <h2 class="text-center my-4 my-xl-5 section-title">Produtos que estão bombando!</h2>
   <section class="container row mx-auto g-4 px-3 mb-4">
     <!-- Em tela mobile, cada div ocupa 6 colunas (12/6 = 2 divs por row) -->
     <!-- Em tela tablet, cada div ocupa 4 colunas (12/4 = 3 divs por row) -->
     <!-- Em tela desktop, cada div ocupa 2 colunas (12/2 = 6 divs por row) -->
     <div class="col-12 col-md-6 col-xl-4">
-      <div class="card">
+      <div class="card rounded-0">
         <img
           src="@/assets/images/card_imgs/camiseta.png"
-          class="card-img-top"
+          class="card-img-top rounded-0"
           alt="Produto camisetas"
         />
         <div class="card-body">
@@ -24,8 +24,12 @@
     </div>
 
     <div class="col-12 col-md-6 col-xl-4">
-      <div class="card">
-        <img src="@/assets/images/card_imgs/bolsa.png" class="card-img-top" alt="Produto bolsas" />
+      <div class="card rounded-0">
+        <img
+          src="@/assets/images/card_imgs/bolsa.png"
+          class="card-img-top rounded-0"
+          alt="Produto bolsas"
+        />
         <div class="card-body">
           <h5 class="card-title">Bolsa Coringa</h5>
           <p class="card-text">
@@ -38,10 +42,10 @@
     </div>
 
     <div class="col-12 col-md-6 col-xl-4">
-      <div class="card">
+      <div class="card rounded-0">
         <img
           src="@/assets/images/card_imgs/calcados.png"
-          class="card-img-top"
+          class="card-img-top rounded-0"
           alt="Produto calçados"
         />
         <div class="card-body">
@@ -56,8 +60,12 @@
     </div>
 
     <div class="col-12 col-md-6 col-xl-4">
-      <div class="card">
-        <img src="@/assets/images/card_imgs/calca.png" class="card-img-top" alt="Produto calças" />
+      <div class="card rounded-0">
+        <img
+          src="@/assets/images/card_imgs/calca.png"
+          class="card-img-top rounded-0"
+          alt="Produto calças"
+        />
         <div class="card-body">
           <h5 class="card-title">Calça Alfaiataria</h5>
           <p class="card-text">Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
@@ -68,10 +76,10 @@
     </div>
 
     <div class="col-12 col-md-6 col-xl-4">
-      <div class="card">
+      <div class="card rounded-0">
         <img
           src="@/assets/images/card_imgs/casacos.png"
-          class="card-img-top"
+          class="card-img-top rounded-0"
           alt="Produto casacos"
         />
         <div class="card-body">
@@ -86,8 +94,12 @@
     </div>
 
     <div class="col-12 col-md-6 col-xl-4">
-      <div class="card">
-        <img src="@/assets/images/card_imgs/oculos.png" class="card-img-top" alt="Produto óculos" />
+      <div class="card rounded-0">
+        <img
+          src="@/assets/images/card_imgs/oculos.png"
+          class="card-img-top rounded-0"
+          alt="Produto óculos"
+        />
         <div class="card-body">
           <h5 class="card-title">Óculos Redondo</h5>
           <p class="card-text">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
