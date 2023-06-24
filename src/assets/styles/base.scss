@@ -11,7 +11,14 @@
 body {
   min-height: 100vh;
   transition: 0.3s;
-  font-family: $inter;
+  font-family: $inter !important;
+}
+
+.btn-purple {
+  background: $primary-purple !important;
+  &:hover {
+    background: darken($primary-purple, 10%) !important;
+  }
 }
 
 .section-title {

@@ -125,11 +125,4 @@
     font-size: 0.875rem;
   }
 }
-
-a.btn-purple {
-  background: v.$primary-purple;
-  &:hover {
-    background: darken(v.$primary-purple, 10%);
-  }
-}
 </style>
