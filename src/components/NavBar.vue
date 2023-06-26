@@ -51,4 +51,29 @@
 .navbar-brand img {
   width: 7.875rem;
 }
+
+@media screen and (min-width: 768px) {
+  .navbar-brand img {
+    width: 6.25rem;
+  }
+  form {
+    width: 14.25rem;
+  }
+  ::placeholder,
+  li > a,
+  button {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  form {
+    width: inherit;
+  }
+  ::placeholder,
+  li > a,
+  button {
+    font-size: inherit;
+  }
+}
 </style>

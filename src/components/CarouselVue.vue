@@ -110,7 +110,8 @@
 <style lang="scss" scoped>
 .carousel-caption {
   @media screen and (min-width: 768px) {
-    bottom: 35%;
+    bottom: 50%;
+    transform: translateY(50%);
     &.caption-2 {
       text-align: right;
     }
@@ -119,7 +120,6 @@
     }
   }
   @media screen and (min-width: 1200px) {
-    bottom: 25%;
     > p {
       font-size: 1.25rem;
     }
