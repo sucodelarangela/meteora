@@ -18,7 +18,13 @@
             unissex.
           </p>
           <p class="card-price">R$ 70,00</p>
-          <a href="#" class="btn btn-primary btn-purple rounded-0 border-0">Ver mais</a>
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#productsModal"
+            class="btn btn-primary btn-purple rounded-0 border-0"
+            >Ver mais</a
+          >
         </div>
       </div>
     </div>
@@ -108,8 +114,15 @@
         </div>
       </div>
     </div>
+
+    <!-- MODALS -->
+    <ProductModal />
   </section>
 </template>
+
+<script setup lang="ts">
+import ProductModal from './ProductModal.vue';
+</script>
 
 <style lang="scss" scoped>
 @use '../assets/styles/variables' as v;
