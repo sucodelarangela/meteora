@@ -7,7 +7,7 @@
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
         <img
-          src="@/assets/images/card_imgs/camiseta.png"
+          src="../assets/images/card_imgs/camiseta.png"
           class="card-img-top rounded-0"
           alt="Produto camisetas"
         />
