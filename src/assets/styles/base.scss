@@ -23,8 +23,10 @@ body {
 
 // To avoid page from shifting right when opening the bootstrap modal
 .modal-open[style] {
-  overflow-y: inherit !important;
-  padding-right: 0px !important;
+  @media screen and (min-width: 768px) {
+    overflow-y: inherit !important;
+    padding-right: 0px !important;
+  }
 }
 
 .section-title {

@@ -9,9 +9,9 @@
     <div class="modal-dialog" role="dialog">
       <div class="modal-content rounded-bottom-1">
         <div class="modal-header bg-black text-bg-dark rounded-top-1" data-bs-theme="dark">
-          <h1 class="modal-title fs-5 d-flex align-items-center" id="modalLabel">
-            <i class="bi bi-check-circle pe-3 fs-2 primary-yellow"></i>Confira detalhes sobre o
-            produto
+          <i class="bi bi-check-circle pe-3 fs-1 primary-yellow"></i>
+          <h1 class="modal-title fs-5 d-flex align-items-center pe-5" id="modalLabel">
+            Confira detalhes sobre o produto
           </h1>
           <button
             type="button"
@@ -21,17 +21,17 @@
           ></button>
         </div>
         <div class="modal-body">
-          <div class="container row g-0">
-            <div class="col-6">
+          <div class="d-flex flex-column flex-md-row g-0 border border-1 rounded-top-1">
+            <div class="col-md-6">
               <img
                 src="../assets/images/card_imgs/camiseta.png"
                 alt="Camiseta 100% algodão, cores diversas, básica, sem estampa."
                 class="rounded-top-1 w-100"
               />
             </div>
-            <div class="col-6 px-3">
+            <div class="col-md-6 px-3">
               <div class="card-body">
-                <h6 class="card-title fw-bold mb-4">Camiseta Conforto</h6>
+                <h6 class="card-title fw-bold mb-4 mt-4 mt-md-0">Camiseta Conforto</h6>
                 <p class="card-text text-dark pb-4 border-bottom border-black">
                   Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem
                   unissex.
@@ -117,6 +117,7 @@
 @use '@/assets/styles/variables' as v;
 
 .modal-dialog {
+  min-width: 21.25rem;
   @media screen and (min-width: 768px) {
     min-width: 43.75rem;
   }
