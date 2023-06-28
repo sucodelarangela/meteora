@@ -6,11 +6,7 @@
     <!-- Em tela desktop, cada div ocupa 2 colunas (12/2 = 6 divs por row) -->
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
-        <img
-          src="../assets/images/card_imgs/camiseta.png"
-          class="card-img-top rounded-0"
-          alt="Produto camisetas"
-        />
+        <img :src="camiseta" class="card-img-top rounded-0" alt="Produto camisetas" />
         <div class="card-body">
           <h5 class="card-title">Camiseta Conforto</h5>
           <p class="card-text">
@@ -31,11 +27,7 @@
 
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
-        <img
-          src="../assets/images/card_imgs/bolsa.png"
-          class="card-img-top rounded-0"
-          alt="Produto bolsas"
-        />
+        <img :src="bolsa" class="card-img-top rounded-0" alt="Produto bolsas" />
         <div class="card-body">
           <h5 class="card-title">Bolsa Coringa</h5>
           <p class="card-text">
@@ -49,11 +41,7 @@
 
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
-        <img
-          src="../assets/images/card_imgs/calcados.png"
-          class="card-img-top rounded-0"
-          alt="Produto calçados"
-        />
+        <img :src="calcados" class="card-img-top rounded-0" alt="Produto calçados" />
         <div class="card-body">
           <h5 class="card-title">Tênis Chuncky</h5>
           <p class="card-text">
@@ -67,11 +55,7 @@
 
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
-        <img
-          src="../assets/images/card_imgs/calca.png"
-          class="card-img-top rounded-0"
-          alt="Produto calças"
-        />
+        <img :src="calca" class="card-img-top rounded-0" alt="Produto calças" />
         <div class="card-body">
           <h5 class="card-title">Calça Alfaiataria</h5>
           <p class="card-text">Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
@@ -83,11 +67,7 @@
 
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
-        <img
-          src="../assets/images/card_imgs/casacos.png"
-          class="card-img-top rounded-0"
-          alt="Produto casacos"
-        />
+        <img :src="casacos" class="card-img-top rounded-0" alt="Produto casacos" />
         <div class="card-body">
           <h5 class="card-title">Jaqueta Jeans</h5>
           <p class="card-text">
@@ -101,11 +81,7 @@
 
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
-        <img
-          src="../assets/images/card_imgs/oculos.png"
-          class="card-img-top rounded-0"
-          alt="Produto óculos"
-        />
+        <img :src="oculos" class="card-img-top rounded-0" alt="Produto óculos" />
         <div class="card-body">
           <h5 class="card-title">Óculos Redondo</h5>
           <p class="card-text">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
@@ -122,6 +98,12 @@
 
 <script setup lang="ts">
 import ProductModal from './ProductModal.vue';
+import bolsa from '../assets/images/card_imgs/bolsa.png';
+import calca from '../assets/images/card_imgs/calca.png';
+import calcados from '../assets/images/card_imgs/calcados.png';
+import casacos from '../assets/images/card_imgs/casacos.png';
+import camiseta from '../assets/images/card_imgs/camiseta.png';
+import oculos from '../assets/images/card_imgs/oculos.png';
 </script>
 
 <style lang="scss" scoped>
