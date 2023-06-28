@@ -15,8 +15,11 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <!-- Ícone do menu -->
-        <span class="navbar-toggler-icon"></span>
+        <!-- Ícones do menu -->
+        <span>
+          <i class="bi bi-list primary-yellow fs-2"></i>
+          <i class="bi bi-x-lg primary-yellow fs-2 d-none"></i>
+        </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
@@ -33,7 +36,8 @@
             <a class="nav-link" href="#">Promoções</a>
           </li>
         </ul>
-        <form class="d-flex">
+        <!-- Input tablet+ -->
+        <form class="d-md-flex d-none">
           <input
             class="form-control me-2 rounded-0"
             type="search"
@@ -45,11 +49,32 @@
       </div>
     </div>
   </header>
+  <!-- Input mobile -->
+  <section class="container mx-auto my-4 bg-light">
+    <form class="d-flex d-md-none">
+      <input
+        class="form-control me-2 rounded-0 border-black"
+        type="search"
+        placeholder="Digite o produto"
+        aria-label="Buscar produto"
+      />
+      <button class="btn btn-outline-dark rounded-0" type="submit">Buscar</button>
+    </form>
+  </section>
 </template>
 
 <style lang="scss" scoped>
 .navbar-brand img {
   width: 7.875rem;
+}
+
+.navbar-toggler[aria-expanded='true'] {
+  > span > .bi-list {
+    display: none;
+  }
+  > span > .bi-x-lg {
+    display: block !important;
+  }
 }
 
 @media screen and (min-width: 768px) {
