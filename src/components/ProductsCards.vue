@@ -32,7 +32,7 @@
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
         <img
-          src="@/assets/images/card_imgs/bolsa.png"
+          src="../assets/images/card_imgs/bolsa.png"
           class="card-img-top rounded-0"
           alt="Produto bolsas"
         />
@@ -50,7 +50,7 @@
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
         <img
-          src="@/assets/images/card_imgs/calcados.png"
+          src="../assets/images/card_imgs/calcados.png"
           class="card-img-top rounded-0"
           alt="Produto calçados"
         />
@@ -68,7 +68,7 @@
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
         <img
-          src="@/assets/images/card_imgs/calca.png"
+          src="../assets/images/card_imgs/calca.png"
           class="card-img-top rounded-0"
           alt="Produto calças"
         />
@@ -84,7 +84,7 @@
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
         <img
-          src="@/assets/images/card_imgs/casacos.png"
+          src="../assets/images/card_imgs/casacos.png"
           class="card-img-top rounded-0"
           alt="Produto casacos"
         />
@@ -102,7 +102,7 @@
     <div class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0">
         <img
-          src="@/assets/images/card_imgs/oculos.png"
+          src="../assets/images/card_imgs/oculos.png"
           class="card-img-top rounded-0"
           alt="Produto óculos"
         />
