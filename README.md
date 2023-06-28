@@ -28,7 +28,7 @@ As tecnologias e linguagens utilizadas nesse desafio foram:
 | ------------- | - |
 | ✨ Nome       | **Meteora - Ecommerce** - Challenge Alura |
 | 🏷️ Tecnologias | Vue 3, Vite, Bootstrap 5 |
-| 🚀 URL         | **https://meteorastore.vercel.app/** */ |
+| 🚀 URL         | **https://meteorastore.vercel.app/** |
 | 🔥 Desafio     | [**Design no Figma**](https://www.figma.com/file/0mR3RFueSiD6pP3B1VUG8U/Challenge-Front-end-%7C-Loja-Meteora-(Copy)?node-id=2386%3A2430&mode=dev) |
 
 ![](./public/ogimage.png#vitrinedev)
