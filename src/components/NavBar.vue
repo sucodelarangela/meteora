@@ -9,31 +9,41 @@
       <button
         class="navbar-toggler border-0"
         type="button"
-        data-bs-toggle="collapse"
+        data-bs-toggle="offcanvas"
         data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
-        aria-label="Toggle navigation"
+        aria-label="Abrir menu"
       >
         <!-- Ícones do menu -->
         <span>
           <i class="bi bi-list primary-yellow fs-2"></i>
-          <i class="bi bi-x-lg primary-yellow fs-2 d-none"></i>
         </span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="offcanvas offcanvas-end text-bg-dark px-4 py-3" id="navbarSupportedContent">
+        <div class="offcanvas-header p-0">
+          <button
+            type="button"
+            class="btn ms-auto p-0"
+            data-bs-dismiss="offcanvas"
+            aria-label="Fechar menu"
+          >
+            <i class="bi bi-x-lg primary-yellow fs-3 d-none"></i>
+          </button>
+        </div>
+
         <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <li class="nav-item py-2 border-bottom">
+            <a class="nav-link p-0 active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Nossas lojas</a>
+          <li class="nav-item py-2 border-bottom">
+            <a class="nav-link p-0" href="#">Nossas lojas</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Novidades</a>
+          <li class="nav-item py-2 border-bottom">
+            <a class="nav-link p-0" href="#">Novidades</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Promoções</a>
+          <li class="nav-item py-2">
+            <a class="nav-link p-0" href="#">Promoções</a>
           </li>
         </ul>
         <!-- Input tablet+ -->
@@ -50,8 +60,8 @@
     </div>
   </header>
   <!-- Input mobile -->
-  <section class="container mx-auto my-4 bg-light">
-    <form class="d-flex d-md-none">
+  <section class="container mx-auto my-4 bg-light d-md-none px-4">
+    <form class="d-flex">
       <input
         class="form-control me-2 rounded-0 border-black"
         type="search"
@@ -64,6 +74,8 @@
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/styles/variables' as v;
+
 .navbar-brand img {
   width: 7.875rem;
 }
@@ -72,8 +84,24 @@
   > span > .bi-list {
     display: none;
   }
-  > span > .bi-x-lg {
+  /* > span > .bi-x-lg {
     display: block !important;
+  } */
+}
+
+.bi-x-lg {
+  display: block !important;
+}
+
+.offcanvas {
+  height: fit-content;
+  width: fit-content !important;
+}
+
+.nav-link {
+  &:hover,
+  &.active {
+    color: v.$primary-yellow !important;
   }
 }
 
@@ -88,6 +116,9 @@
   li > a,
   button {
     font-size: 0.875rem;
+  }
+  .offcanvas {
+    flex-direction: row;
   }
 }
 
