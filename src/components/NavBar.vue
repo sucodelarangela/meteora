@@ -1,6 +1,6 @@
 <template>
   <!-- Código doc bootstrap para edição -->
-  <header class="navbar navbar-expand-md navbar-dark bg-black">
+  <header class="navbar navbar-expand-md navbar-dark bg-black p-0">
     <div class="container-fluid container-lg">
       <a class="navbar-brand" href="#">
         <img src="@/assets/images/logo/logo_white.png" alt="" aria-hidden="true" />
@@ -34,16 +34,16 @@
 
         <ul class="navbar-nav me-auto">
           <li class="nav-item py-2 border-bottom">
-            <a class="nav-link p-0 active" aria-current="page" href="#">Home</a>
+            <a class="nav-link p-0 p-md-2 active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item py-2 border-bottom">
-            <a class="nav-link p-0" href="#">Nossas lojas</a>
+            <a class="nav-link p-0 p-md-2" href="#">Nossas lojas</a>
           </li>
           <li class="nav-item py-2 border-bottom">
-            <a class="nav-link p-0" href="#">Novidades</a>
+            <a class="nav-link p-0 p-md-2" href="#">Novidades</a>
           </li>
           <li class="nav-item py-2">
-            <a class="nav-link p-0" href="#">Promoções</a>
+            <a class="nav-link p-0 p-md-2" href="#">Promoções</a>
           </li>
         </ul>
         <!-- Input tablet+ -->
@@ -84,9 +84,6 @@
   > span > .bi-list {
     display: none;
   }
-  /* > span > .bi-x-lg {
-    display: block !important;
-  } */
 }
 
 .bi-x-lg {
@@ -119,6 +116,11 @@
   }
   .offcanvas {
     flex-direction: row;
+  }
+
+  .nav-item {
+    border: none !important;
+    padding: inherit !important;
   }
 }
 
