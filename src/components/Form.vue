@@ -17,6 +17,8 @@
         <button
           type="button"
           class="btn btn-primary btn-purple rounded-0 border-0"
+          data-bs-toggle="modal"
+          data-bs-target="#newsletterModal"
           id="button-addon2"
         >
           Enviar
@@ -24,7 +26,14 @@
       </div>
     </form>
   </section>
+
+  <!-- MODALS -->
+  <NewsletterModal />
 </template>
+
+<script lang="ts" setup>
+import NewsletterModal from './NewsletterModal.vue';
+</script>
 
 <style lang="scss" scoped>
 @use '../assets/styles/variables' as v;

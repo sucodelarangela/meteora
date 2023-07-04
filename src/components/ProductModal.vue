@@ -6,10 +6,10 @@
     aria-labelledby="modalLabel"
     aria-hidden="true"
   >
-    <div class="modal-dialog" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="dialog">
       <div class="modal-content rounded-bottom-1">
         <div class="modal-header bg-black text-bg-dark rounded-top-1" data-bs-theme="dark">
-          <i class="bi bi-check-circle pe-3 fs-1 primary-yellow"></i>
+          <i class="bi bi-check-circle pe-3 fs-2 primary-yellow"></i>
           <h1 class="modal-title fs-5 d-flex align-items-center pe-5" id="modalLabel">
             Confira detalhes sobre o produto
           </h1>
