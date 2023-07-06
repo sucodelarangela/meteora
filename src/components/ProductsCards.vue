@@ -4,16 +4,17 @@
     <!-- Em tela mobile, cada div ocupa 6 colunas (12/6 = 2 divs por row) -->
     <!-- Em tela tablet, cada div ocupa 4 colunas (12/4 = 3 divs por row) -->
     <!-- Em tela desktop, cada div ocupa 2 colunas (12/2 = 6 divs por row) -->
-    <div class="col-12 col-md-6 col-xl-4">
+    <div
+      v-for="product in productsStore.products"
+      :key="product.id"
+      class="col-12 col-md-6 col-xl-4"
+    >
       <div class="card rounded-0">
-        <img :src="camiseta" class="card-img-top rounded-0" alt="Produto camisetas" />
+        <img :src="product.images[0]" class="card-img-top rounded-0" :alt="product.description" />
         <div class="card-body">
-          <h5 class="card-title">Camiseta Conforto</h5>
-          <p class="card-text">
-            Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem
-            unissex.
-          </p>
-          <p class="card-price">R$ 70,00</p>
+          <h5 class="card-title">{{ product.title }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-price">US$ {{ product.price }}</p>
           <a
             href="#"
             data-bs-toggle="modal"
@@ -25,72 +26,6 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6 col-xl-4">
-      <div class="card rounded-0">
-        <img :src="bolsa" class="card-img-top rounded-0" alt="Produto bolsas" />
-        <div class="card-body">
-          <h5 class="card-title">Bolsa Coringa</h5>
-          <p class="card-text">
-            Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!
-          </p>
-          <p class="card-price">R$ 120,00</p>
-          <a href="#" class="btn btn-primary btn-purple rounded-0 border-0">Ver mais</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-xl-4">
-      <div class="card rounded-0">
-        <img :src="calcados" class="card-img-top rounded-0" alt="Produto calçados" />
-        <div class="card-body">
-          <h5 class="card-title">Tênis Chuncky</h5>
-          <p class="card-text">
-            Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.
-          </p>
-          <p class="card-price">R$ 250,00</p>
-          <a href="#" class="btn btn-primary btn-purple rounded-0 border-0">Ver mais</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-xl-4">
-      <div class="card rounded-0">
-        <img :src="calca" class="card-img-top rounded-0" alt="Produto calças" />
-        <div class="card-body">
-          <h5 class="card-title">Calça Alfaiataria</h5>
-          <p class="card-text">Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!</p>
-          <p class="card-price">R$ 180,00</p>
-          <a href="#" class="btn btn-primary btn-purple rounded-0 border-0">Ver mais</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-xl-4">
-      <div class="card rounded-0">
-        <img :src="casacos" class="card-img-top rounded-0" alt="Produto casacos" />
-        <div class="card-body">
-          <h5 class="card-title">Jaqueta Jeans</h5>
-          <p class="card-text">
-            Modelo unissex oversized com gola de camurça. Atemporal e autêntica!
-          </p>
-          <p class="card-price">R$ 150,00</p>
-          <a href="#" class="btn btn-primary btn-purple rounded-0 border-0">Ver mais</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-xl-4">
-      <div class="card rounded-0">
-        <img :src="oculos" class="card-img-top rounded-0" alt="Produto óculos" />
-        <div class="card-body">
-          <h5 class="card-title">Óculos Redondo</h5>
-          <p class="card-text">Armação metálica em grafite com lentes arredondadas. Sem erro!</p>
-          <p class="card-price">R$ 120,00</p>
-          <a href="#" class="btn btn-primary btn-purple rounded-0 border-0">Ver mais</a>
-        </div>
-      </div>
-    </div>
-
     <!-- MODALS -->
     <ProductModal />
   </section>
@@ -98,12 +33,17 @@
 
 <script setup lang="ts">
 import ProductModal from './ProductModal.vue';
-import bolsa from '../assets/images/card_imgs/bolsa.png';
-import calca from '../assets/images/card_imgs/calca.png';
-import calcados from '../assets/images/card_imgs/calcados.png';
-import casacos from '../assets/images/card_imgs/casacos.png';
-import camiseta from '../assets/images/card_imgs/camiseta.png';
-import oculos from '../assets/images/card_imgs/oculos.png';
+import { onMounted } from 'vue';
+
+import { useProductsStore } from '../stores/ProductsStore';
+
+const productsStore = useProductsStore();
+
+onMounted(() => {
+  productsStore.fetchProducts().catch((error: any) => {
+    console.log(error.message);
+  });
+});
 </script>
 
 <style lang="scss" scoped>

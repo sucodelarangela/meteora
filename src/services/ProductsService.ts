@@ -12,7 +12,7 @@ const apiClient = axios.create({
 
 export default {
   getAllProducts() {
-    return apiClient.get('/products');
+    return apiClient.get('/products/?limit=6');
   },
   // getEvent(id) {
   //   return apiClient.get('/events/' + id);
