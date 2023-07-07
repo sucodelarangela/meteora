@@ -11,9 +11,18 @@ export const useProductsStore = defineStore('ProductsStore', {
   },
   actions: {
     fetchProducts() {
-      return ProductsService.getAllProducts()
-        .then(response => {
-          this.products = response.data.products;
+      const categories = ['mens-shirts', 'womens-bags', 'mens-shoes', 'womens-dresses', 'mens-watches', 'sunglasses'];
+      const promises: Promise<any>[] = [];
+
+      categories.forEach(category => {
+        promises.push(ProductsService.getAllProducts(category));
+      });
+
+      return Promise.all(promises)
+        .then(responses => {
+          const results = responses.map(response => response.data.products);
+
+          results.forEach(res => this.products.push(res[3]));
         })
         .catch(error => {
           throw error;

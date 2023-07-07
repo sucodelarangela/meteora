@@ -9,19 +9,27 @@
       :key="product.id"
       class="col-12 col-md-6 col-xl-4"
     >
-      <div class="card rounded-0">
-        <img :src="product.images[0]" class="card-img-top rounded-0" :alt="product.description" />
-        <div class="card-body">
-          <h5 class="card-title">{{ product.title }}</h5>
-          <p class="card-text">{{ product.description }}</p>
-          <p class="card-price">US$ {{ product.price }}</p>
-          <a
-            href="#"
-            data-bs-toggle="modal"
-            data-bs-target="#productsModal"
-            class="btn btn-primary btn-purple rounded-0 border-0"
-            >Ver mais</a
-          >
+      <div class="card rounded-0 h-100">
+        <img
+          :src="product.images[0]"
+          class="card-img-top rounded-0 object-fit-cover"
+          :alt="product.description"
+        />
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-price">US$ {{ product.price }}</p>
+          </div>
+          <div>
+            <a
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#productsModal"
+              class="btn btn-primary btn-purple rounded-0 border-0"
+              >Ver mais</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -58,6 +66,9 @@ onMounted(() => {
   }
   &-text {
     font-size: 0.875rem;
+  }
+  & img {
+    aspect-ratio: 1 / 1.2;
   }
 }
 </style>

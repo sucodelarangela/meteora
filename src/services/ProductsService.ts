@@ -11,8 +11,8 @@ const apiClient = axios.create({
 });
 
 export default {
-  getAllProducts() {
-    return apiClient.get('/products/?limit=6');
+  getAllProducts(category) {
+    return apiClient.get(`/products/category/${category}`);
   },
   // getEvent(id) {
   //   return apiClient.get('/events/' + id);
