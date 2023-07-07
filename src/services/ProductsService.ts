@@ -11,7 +11,7 @@ const apiClient = axios.create({
 });
 
 export default {
-  getAllProducts(category) {
+  getAllProducts(category: string) {
     return apiClient.get(`/products/category/${category}`);
   },
   // getEvent(id) {
