@@ -114,8 +114,6 @@
 
 <script lang="ts" setup>
 const props = defineProps(['product']);
-
-console.log(props);
 </script>
 
 <style lang="scss" scoped>

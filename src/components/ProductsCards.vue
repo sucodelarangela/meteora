@@ -1,14 +1,7 @@
 <template>
   <h2 class="text-center my-4 my-xl-5 section-title">Produtos que estão bombando!</h2>
   <section class="container row mx-auto g-4 px-3 mb-4 mb-xl-5">
-    <!-- Em tela mobile, cada div ocupa 6 colunas (12/6 = 2 divs por row) -->
-    <!-- Em tela tablet, cada div ocupa 4 colunas (12/4 = 3 divs por row) -->
-    <!-- Em tela desktop, cada div ocupa 2 colunas (12/2 = 6 divs por row) -->
-    <div
-      v-for="product in productsStore.products"
-      :key="product.id"
-      class="col-12 col-md-6 col-xl-4"
-    >
+    <div v-for="product in filterProducts" :key="product.id" class="col-12 col-md-6 col-xl-4">
       <div class="card rounded-0 h-100">
         <img
           :src="product.images[0]"
@@ -42,13 +35,14 @@
 
 <script setup lang="ts">
 import ProductModal from './ProductModal.vue';
-import { onMounted, ref } from 'vue';
-import type { Ref } from 'vue';
-
 import { useProductsStore } from '../stores/ProductsStore';
+import { onMounted, ref } from 'vue';
 import type IProduct from '@/interfaces/IProduct';
+import type { Ref } from 'vue';
+import { storeToRefs } from 'pinia';
 
 const productsStore = useProductsStore();
+const { filterProducts } = storeToRefs(productsStore);
 
 const selectedId: Ref<IProduct | undefined> = ref();
 

@@ -53,6 +53,8 @@
             type="search"
             placeholder="Digite o produto"
             aria-label="Buscar produto"
+            v-model="productsStore.query"
+            @change="console.log(productsStore.query)"
           />
           <button class="btn btn-outline-light rounded-0" type="submit">Buscar</button>
         </form>
@@ -67,11 +69,19 @@
         type="search"
         placeholder="Digite o produto"
         aria-label="Buscar produto"
+        v-model="productsStore.query"
+        @change="console.log(productsStore.query)"
       />
       <button class="btn btn-outline-dark rounded-0" type="submit">Buscar</button>
     </form>
   </section>
 </template>
+
+<script setup lang="ts">
+import { useProductsStore } from '../stores/ProductsStore';
+
+const productsStore = useProductsStore();
+</script>
 
 <style lang="scss" scoped>
 @use '../assets/styles/variables' as v;
