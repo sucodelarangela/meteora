@@ -27,6 +27,6 @@ export const useProductsStore = defineStore('ProductsStore', {
         .catch(error => {
           throw error;
         });
-    }
+    },
   }
 });

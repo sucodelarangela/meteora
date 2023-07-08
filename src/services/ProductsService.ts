@@ -14,9 +14,9 @@ export default {
   getAllProducts(category: string) {
     return apiClient.get(`/products/category/${category}`);
   },
-  // getEvent(id) {
-  //   return apiClient.get('/events/' + id);
-  // },
+  getSingleProduct(id: number) {
+    return apiClient.get('/products/' + id);
+  },
   // postEvent(event) {
   //   return apiClient.post('/events', event);
   // }

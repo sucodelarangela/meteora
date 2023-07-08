@@ -19,7 +19,7 @@
           <div>
             <h5 class="card-title">{{ product.title }}</h5>
             <p class="card-text">{{ product.description }}</p>
-            <p class="card-price">US$ {{ product.price }}</p>
+            <p class="card-price">US$ {{ product.price.toFixed(2) }}</p>
           </div>
           <div>
             <a
@@ -27,6 +27,7 @@
               data-bs-toggle="modal"
               data-bs-target="#productsModal"
               class="btn btn-primary btn-purple rounded-0 border-0"
+              @click="openModal(product)"
               >Ver mais</a
             >
           </div>
@@ -35,17 +36,25 @@
     </div>
 
     <!-- MODALS -->
-    <ProductModal />
+    <ProductModal :product="selectedId" />
   </section>
 </template>
 
 <script setup lang="ts">
 import ProductModal from './ProductModal.vue';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
+import type { Ref } from 'vue';
 
 import { useProductsStore } from '../stores/ProductsStore';
+import type IProduct from '@/interfaces/IProduct';
 
 const productsStore = useProductsStore();
+
+const selectedId: Ref<IProduct | undefined> = ref();
+
+const openModal = (product: IProduct) => {
+  selectedId.value = product;
+};
 
 onMounted(() => {
   productsStore.fetchProducts().catch((error: any) => {

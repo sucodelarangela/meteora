@@ -17,30 +17,29 @@
             type="button"
             class="btn-close"
             data-bs-dismiss="modal"
-            aria-label="Close"
+            aria-label="Fechar modal"
           ></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" v-if="product">
           <div class="d-flex flex-column flex-md-row g-0 border border-1 rounded-top-1">
             <div class="col-md-6">
               <img
-                src="../assets/images/card_imgs/camiseta.png"
-                alt="Camiseta 100% algodão, cores diversas, básica, sem estampa."
-                class="rounded-top-1 w-100"
+                :src="product.images[0]"
+                :alt="product.description"
+                class="image rounded-top-1 w-100 object-fit-cover"
               />
             </div>
             <div class="col-md-6 px-3">
               <div class="card-body">
-                <h6 class="card-title fw-bold mb-4 mt-4 mt-md-0">Camiseta Conforto</h6>
+                <h6 class="card-title fw-bold mb-4 mt-4 mt-md-0">{{ product.title }}</h6>
                 <p class="card-text text-dark pb-4 border-bottom border-black">
-                  Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem
-                  unissex.
+                  {{ product.description }}
                 </p>
-                <p class="card-price fs-5 fw-medium my-4">R$ 70,00</p>
-                <h6 class="card-subtitle mb-2">Vendido e entregue por Riachuelo</h6>
+                <p class="card-price fs-5 fw-medium my-4">US$ {{ product.price.toFixed(2) }}</p>
+                <h6 class="card-subtitle mb-2">Sold and delivered by {{ product.brand }}</h6>
               </div>
               <hr />
-              <h6 class="form-label fw-bold">Cores:</h6>
+              <h6 class="form-label fw-bold">Colors:</h6>
               <div class="container row">
                 <div class="form-check col-4 d-flex flex-column align-items-center p-0">
                   <input
@@ -50,7 +49,7 @@
                     id="color1"
                     style="background-color: lightblue"
                   />
-                  <label class="form-check-label" for="color1">Azul claro</label>
+                  <label class="form-check-label" for="color1">Light blue</label>
                 </div>
                 <div class="form-check col-4 d-flex flex-column align-items-center p-0">
                   <input
@@ -70,31 +69,31 @@
                     id="color3"
                     style="background-color: black"
                   />
-                  <label class="form-check-label" for="color3">Preto</label>
+                  <label class="form-check-label" for="color3">Black</label>
                 </div>
               </div>
               <hr />
-              <h6 class="form-label fw-bold">Tamanhos:</h6>
+              <h6 class="form-label fw-bold">Sizes:</h6>
               <div class="container row">
                 <div class="form-check col-2 d-flex flex-column align-items-center p-0">
                   <input class="form-check-input mx-0" type="radio" name="sizes" id="size1" />
-                  <label class="form-check-label" for="size1">P</label>
+                  <label class="form-check-label" for="size1">S</label>
                 </div>
                 <div class="form-check col-2 d-flex flex-column align-items-center p-0">
                   <input class="form-check-input mx-0" type="radio" name="sizes" id="size2" />
-                  <label class="form-check-label" for="size2">PP</label>
+                  <label class="form-check-label" for="size2">M</label>
                 </div>
                 <div class="form-check col-2 d-flex flex-column align-items-center p-0">
                   <input class="form-check-input mx-0" type="radio" name="sizes" id="size3" />
-                  <label class="form-check-label" for="size3">M</label>
+                  <label class="form-check-label" for="size3">L</label>
                 </div>
                 <div class="form-check col-2 d-flex flex-column align-items-center p-0">
                   <input class="form-check-input mx-0" type="radio" name="sizes" id="size3" />
-                  <label class="form-check-label" for="size3">G</label>
+                  <label class="form-check-label" for="size3">XL</label>
                 </div>
                 <div class="form-check col-2 d-flex flex-column align-items-center p-0">
                   <input class="form-check-input mx-0" type="radio" name="sizes" id="size3" />
-                  <label class="form-check-label" for="size3">GG</label>
+                  <label class="form-check-label" for="size3">2XL</label>
                 </div>
               </div>
               <div class="modal-footer border-0 justify-content-start">
@@ -112,6 +111,12 @@
     </div>
   </div>
 </template>
+
+<script lang="ts" setup>
+const props = defineProps(['product']);
+
+console.log(props);
+</script>
 
 <style lang="scss" scoped>
 @use '@/assets/styles/variables' as v;
@@ -133,10 +138,20 @@
   }
 }
 
+.image {
+  aspect-ratio: 1/1.2;
+}
+
 .form {
   &-label,
   &-check-label {
     font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal-body > div {
+    border: none !important;
   }
 }
 </style>
