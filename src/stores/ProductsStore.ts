@@ -5,6 +5,7 @@ import type IProduct from '../interfaces/IProduct';
 
 export const useProductsStore = defineStore('ProductsStore', {
   state: () => ({
+    categories: ['mens-shirts', 'womens-bags', 'mens-shoes', 'womens-dresses', 'mens-watches', 'sunglasses'],
     products: <IProduct[]>[],
     query: ''
   }),
@@ -20,10 +21,9 @@ export const useProductsStore = defineStore('ProductsStore', {
   },
   actions: {
     async fetchProducts() {
-      const categories = ['mens-shirts', 'womens-bags', 'mens-shoes', 'womens-dresses', 'mens-watches', 'sunglasses'];
       const promises: Promise<any>[] = [];
 
-      categories.forEach(category => {
+      this.categories.forEach(category => {
         promises.push(ProductsService.getAllProducts(category));
       });
 
