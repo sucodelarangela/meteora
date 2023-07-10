@@ -28,17 +28,17 @@
         <img
           src="@/assets/images/banners_mob/banner_1.png"
           class="d-md-none w-100"
-          alt="Modelo feminina vestindo blusa rosa fluorescente em fundo lilás"
+          alt="Female model wearing pink blouse in a purple background"
         />
         <img
           src="@/assets/images/banners_tablet/banner_1.png"
           class="d-none d-md-block d-xl-none w-100"
-          alt="Modelo feminina vestindo blusa rosa fluorescente em fundo lilás"
+          alt="Female model wearing pink blouse in a purple background"
         />
         <img
           src="@/assets/images/banners_desktop/banner_1.png"
           class="d-none d-xl-block w-100"
-          alt="Modelo feminina vestindo blusa rosa fluorescente em fundo lilás"
+          alt="Female model wearing pink blouse in a purple background"
         />
       </div>
       <!-- CARROSSEL 02 -->
@@ -46,21 +46,21 @@
         <img
           src="@/assets/images/banners_mob/banner_2.png"
           class="d-md-none w-100"
-          alt="Modelo feminina vestindo moleton cinza mescla com óculos escuro em fundo rosa"
+          alt="Female model wearing gray sweatshirt with sunglasses in a pink background"
         />
         <img
           src="@/assets/images/banners_tablet/banner_2.png"
           class="d-none d-md-block d-xl-none w-100"
-          alt="Modelo feminina vestindo moleton cinza mescla com óculos escuro em fundo rosa"
+          alt="Female model wearing gray sweatshirt with sunglasses in a pink background"
         />
         <img
           src="@/assets/images/banners_desktop/banner_2.png"
           class="d-none d-xl-block w-100"
-          alt="Modelo feminina vestindo moleton cinza mescla com óculos escuro em fundo rosa"
+          alt="Female model wearing gray sweatshirt with sunglasses in a pink background"
         />
         <div class="carousel-caption caption-2 d-md-block">
-          <h5 class="carousel-title fw-medium text-uppercase">Coleção atemporal</h5>
-          <p class="lh-llg">Estilo e qualidade para durar.</p>
+          <h5 class="carousel-title fw-medium text-uppercase">Timeless collection</h5>
+          <p class="lh-llg">Style and quality to last.</p>
         </div>
       </div>
       <!-- CARROSSEL 03 -->
@@ -68,21 +68,21 @@
         <img
           src="@/assets/images/banners_mob/banner_3.png"
           class="d-md-none w-100"
-          alt="Modelo masculino com blazer cinza, camisa branca, gravata borboleta e chapéu em fundo laranja"
+          alt="Male model with gray blazer, white shirt, bow-tie and hat in an orange background"
         />
         <img
           src="@/assets/images/banners_tablet/banner_3.png"
           class="d-none d-md-block d-xl-none w-100"
-          alt="Modelo masculino com blazer cinza, camisa branca, gravata borboleta e chapéu em fundo laranja"
+          alt="Male model with gray blazer, white shirt, bow-tie and hat in an orange background"
         />
         <img
           src="@/assets/images/banners_desktop/banner_3.png"
           class="d-none d-xl-block w-100"
-          alt="Modelo masculino com blazer cinza, camisa branca, gravata borboleta e chapéu em fundo laranja"
+          alt="Male model with gray blazer, white shirt, bow-tie and hat in an orange background"
         />
         <div class="carousel-caption caption-3 d-md-block">
-          <h5 class="carousel-title fw-medium text-uppercase">Coleção atemporal</h5>
-          <p>Alto impacto visual, baixo impacto ambiental.</p>
+          <h5 class="carousel-title fw-medium text-uppercase">Timeless collection</h5>
+          <p>High visual impact, low environmental impact.</p>
         </div>
       </div>
     </div>

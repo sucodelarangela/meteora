@@ -37,13 +37,13 @@
             <a class="nav-link p-0 p-md-2 active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item py-2 border-bottom">
-            <a class="nav-link p-0 p-md-2" href="#">Nossas lojas</a>
+            <a class="nav-link p-0 p-md-2" href="#">Our stores</a>
           </li>
           <li class="nav-item py-2 border-bottom">
-            <a class="nav-link p-0 p-md-2" href="#">Novidades</a>
+            <a class="nav-link p-0 p-md-2" href="#">News</a>
           </li>
           <li class="nav-item py-2">
-            <a class="nav-link p-0 p-md-2" href="#">Promoções</a>
+            <a class="nav-link p-0 p-md-2" href="#">Sale items</a>
           </li>
         </ul>
         <!-- Input tablet+ -->
@@ -51,12 +51,12 @@
           <input
             class="form-control me-2 rounded-0"
             type="search"
-            placeholder="Digite o produto"
-            aria-label="Buscar produto"
+            placeholder="Search a product"
+            aria-label="Search a product"
             v-model="productsStore.query"
             @change="console.log(productsStore.query)"
           />
-          <button class="btn btn-outline-light rounded-0" type="submit">Buscar</button>
+          <!-- <button class="btn btn-outline-light rounded-0" type="submit">Buscar</button> -->
         </form>
       </div>
     </div>
@@ -67,12 +67,12 @@
       <input
         class="form-control me-2 rounded-0 border-black"
         type="search"
-        placeholder="Digite o produto"
-        aria-label="Buscar produto"
+        placeholder="Search a product"
+        aria-label="Search a product"
         v-model="productsStore.query"
         @change="console.log(productsStore.query)"
       />
-      <button class="btn btn-outline-dark rounded-0" type="submit">Buscar</button>
+      <!-- <button class="btn btn-outline-dark rounded-0" type="submit">Buscar</button> -->
     </form>
   </section>
 </template>
