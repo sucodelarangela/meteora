@@ -11,13 +11,13 @@
         <div class="modal-header bg-black text-bg-dark rounded-top-1" data-bs-theme="dark">
           <i class="bi bi-check-circle pe-3 fs-2 primary-yellow"></i>
           <h1 class="modal-title fs-5 d-flex align-items-center pe-5" id="modalLabel">
-            Confira detalhes sobre o produto
+            Check product details
           </h1>
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="modal"
-            aria-label="Fechar modal"
+            aria-label="Close dialog"
           ></button>
         </div>
         <div class="modal-body" v-if="product">
@@ -101,7 +101,7 @@
                   type="button"
                   class="btn btn-primary btn-purple rounded-0 border-0 fw-medium"
                 >
-                  Adicionar à sacola
+                  Add to cart
                 </button>
               </div>
             </div>

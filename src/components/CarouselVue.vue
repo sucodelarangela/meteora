@@ -108,6 +108,8 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/styles/variables' as v;
+
 .carousel-caption {
   @media screen and (min-width: 768px) {
     bottom: 50%;
@@ -126,7 +128,11 @@
   }
 }
 .carousel-title {
+  font-family: v.$montserrat;
   font-size: 2rem;
+  + p {
+    font-family: v.$montserrat;
+  }
   @media screen and (min-width: 1200px) {
     font-size: 3rem;
   }

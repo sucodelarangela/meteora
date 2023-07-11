@@ -2,16 +2,15 @@
   <section class="container mx-auto g-4 mb-4">
     <form class="container border border-black p-4 my-3 my-md-4 my-xl-5 text-center mx-auto">
       <h6 class="legend mb-4 mx-auto">
-        Quer receber nossas novidades, promoções exclusivas e 10% OFF na primeira compra?
-        Cadastre-se!
+        Want to receive our news, exclusive promotions and 10% OFF on your first purchase? Register!
       </h6>
 
       <div class="form-input input-group mx-auto">
         <input
           type="email"
           class="form-control border-black rounded-0"
-          placeholder="Digite seu e-mail"
-          aria-label="Digite seu e-mail"
+          placeholder="Type your e-mail"
+          aria-label="Type your e-mail"
           aria-describedby="button-addon2"
         />
         <button
@@ -21,7 +20,7 @@
           data-bs-target="#newsletterModal"
           id="button-addon2"
         >
-          Enviar
+          Register
         </button>
       </div>
     </form>

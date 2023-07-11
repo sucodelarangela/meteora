@@ -9,7 +9,7 @@
         >sucodelarangela</a
       >
       |<br class="d-md-none" />
-      Projeto fictício sem fins comerciais.
+      Fictitious non-commercial project.
     </p>
   </footer>
 </template>

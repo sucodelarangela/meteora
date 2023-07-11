@@ -1,5 +1,5 @@
 <template>
-  <h2 class="text-center my-4 my-xl-5 section-title">Busque por categoria:</h2>
+  <h2 class="text-center my-4 my-xl-5 section-title">Search by category:</h2>
   <section class="container row mx-auto g-4 mb-4">
     <div
       class="col-6 col-md-4 col-xl-2"
