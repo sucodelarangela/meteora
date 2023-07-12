@@ -9,11 +9,7 @@
       :key="category"
     >
       <div class="card rounded-0 border-0" @click="productsStore.query = category">
-        <img
-          :src="`src/assets/images/categories/${category}.png`"
-          class="card-img-top rounded-0"
-          :alt="category"
-        />
+        <img :src="getImage(category)" class="card-img-top rounded-0" :alt="category" />
         <div class="card-header bg-black text-bg-dark">
           <p class="text-center mb-0">
             {{ f$!.formatCategory(category) }}
@@ -32,6 +28,10 @@ import { inject } from 'vue';
 const productsStore = useProductsStore();
 
 const f$: IFilters | undefined = inject('$f');
+
+const getImage = (category: string) => {
+  return new URL(`../assets/images/categories/${category}.png`, import.meta.url).toString();
+};
 </script>
 
 <style scoped>
