@@ -1,16 +1,24 @@
-import './assets/styles/base.scss';
+import App from './App.vue';
 
+// Store
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
 
-import App from './App.vue';
+// Routes
 import router from './router';
 
+// Styles
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
+import './assets/styles/base.scss';
+
+// Utils
+import filters from './utils/filters';
 
 const app = createApp(App);
+
+app.provide('$f', filters);
 
 app.use(router);
 app.use(createPinia());

@@ -11,17 +11,17 @@
         <div class="modal-header bg-black text-bg-dark rounded-top-1" data-bs-theme="dark">
           <i class="bi bi-check-circle pe-3 fs-2 primary-yellow"></i>
           <h1 class="modal-title fs-5 d-flex align-items-center pe-5" id="modalLabel">
-            E-mail cadastrado com sucesso!
+            E-mail successfully registered!
           </h1>
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="modal"
-            aria-label="Close"
+            aria-label="Close dialog"
           ></button>
         </div>
         <div class="modal-body">
-          <p>Em breve você receberá novidades exclusivas da Meteora.</p>
+          <p>Soon you will be receiving exclusive news from Meteora.</p>
         </div>
       </div>
     </div>

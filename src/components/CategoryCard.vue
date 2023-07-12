@@ -1,12 +1,14 @@
 <template>
-  <h2 class="text-center my-4 my-xl-5 section-title">Search by category:</h2>
+  <h2 class="text-center my-4 my-xl-5 section-title">
+    Search by category: {{ f$?.formatCategory(productsStore.query) }}
+  </h2>
   <section class="container row mx-auto g-4 mb-4">
     <div
       class="col-6 col-md-4 col-xl-2"
       v-for="category in productsStore.categories"
       :key="category"
     >
-      <div class="card rounded-0 border-0">
+      <div class="card rounded-0 border-0" @click="productsStore.query = category">
         <img
           :src="`src/assets/images/categories/${category}.png`"
           class="card-img-top rounded-0"
@@ -14,7 +16,7 @@
         />
         <div class="card-header bg-black text-bg-dark">
           <p class="text-center mb-0">
-            {{ formatCategory(category) }}
+            {{ f$!.formatCategory(category) }}
           </p>
         </div>
       </div>
@@ -24,11 +26,16 @@
 
 <script setup lang="ts">
 import { useProductsStore } from '@/stores/ProductsStore';
+import type IFilters from '@/interfaces/IFilters';
+import { inject } from 'vue';
 
 const productsStore = useProductsStore();
 
-const formatCategory = (category: string) => {
-  const formatted = category.replace('mens', "men's");
-  return (formatted.charAt(0).toUpperCase() + formatted.slice(1)).split('-').join(' ');
-};
+const f$: IFilters | undefined = inject('$f');
 </script>
+
+<style scoped>
+.card:hover {
+  cursor: pointer;
+}
+</style>
