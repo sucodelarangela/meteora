@@ -8,17 +8,15 @@ _[Read it in English](#English)_
 
 A **Meteora** é uma empresa fictícia de comércio eletrônico de roupas atemporais, casuais e sem gênero, que acredita que a moda é muito mais do que apenas tendências passageiras e oferece peças versáteis que se adaptam a qualquer estilo e ocasião. Este projeto foi desenvolvido como resultado de um Desafio Front-End (7ª edição) exclusivo para alunos da escola de tecnologia [Alura](https://www.alura.com.br).
 
-<!-- Além do desafio em si, optei por fazer os dois temas sugeridos em vez de apenas um deles. Também optei por alimentar dinamicamente o preenchimento do ingresso com os dados fornecidos pelo usuário no formulário da página **Ingresso**. Esses dados são salvos no _localStorage_ do browser e possibilitam o redirecionamento dinâmico para a página do ingresso. Dessa forma, o usuário poderá fazer download do seu ingresso em formato PNG. -->
-
-<!-- Como desafio adicional, fiz a conversão da aplicação de JavaScript para TypeScript. -->
-
 As tecnologias e linguagens utilizadas nesse desafio foram:
 
 <div>
   <img src="https://img.shields.io/badge/vue 3-1a1a1a?style=for-the-badge&logo=vue.js&logoColor=4FC08D"/>
   <img src="https://img.shields.io/badge/vite-1e1e20?style=for-the-badge&logo=vite&logoColor=646CFF"/>
+  <img src="https://img.shields.io/badge/pinia-111827?style=for-the-badge&logo=pinia&logoColor=131a27">
   <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
   <img src="https://img.shields.io/badge/bootstrap 5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/sass-f8f9fa?style=for-the-badge&logo=sass&logoColor=CC6699">
 </div>
 
 > Você pode saber um pouco mais como funcionam os _challenges_ da Alura visitando a seção [**🦾 Sobre o desafio**](#challenge).
@@ -27,7 +25,7 @@ As tecnologias e linguagens utilizadas nesse desafio foram:
 | 🪧 Vitrine Dev |  |
 | ------------- | - |
 | ✨ Nome       | **Meteora - Ecommerce** - Challenge Alura |
-| 🏷️ Tecnologias | Vue 3, Vite, Bootstrap 5 |
+| 🏷️ Tecnologias | Vue 3, Vite, Pinia, TypeScript, Bootstrap 5, Sass |
 | 🚀 URL         | **https://meteorastore.vercel.app/** |
 | 🔥 Desafio     | [**Design no Figma**](https://www.figma.com/file/0mR3RFueSiD6pP3B1VUG8U/Challenge-Front-end-%7C-Loja-Meteora-(Copy)?node-id=2386%3A2430&mode=dev) |
 
@@ -58,10 +56,6 @@ _English version_
 ## 🔎 Overview
 
 **Meteora** is a fictional timeless, casua, no-gender clothes e-commerce tha believes fashion is much more than just passing trends and offers versatile pieces that adapt to any style and occasion. This project is being developed as a result of a Front-End Challenge (7th edition) exclusively for students of [Alura](https://www.alura.com.br) tech school.
-
-<!-- Besides the challenge itself, I have chosen to develop both themes (_summer_ and _boreal_) instead of choosing only one. I have also chosen to dynamically feed the ticket's information with the data the user provides in the form on **Ingresso** page. These data are saved in the browser's _localStorage_ and allow the dynamic redirect to your ticket page, where the user can download her/his ticket.
-
-As an additional challenge, I've converted all JavaScript to TypeScript in this application. -->
 
 The stack used in this challenge was:
 
