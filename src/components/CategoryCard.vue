@@ -36,6 +36,8 @@ const getImage = (category: string) => {
 
 <style scoped>
 .card:hover {
+  box-shadow: 4px 4px 0 black;
   cursor: pointer;
+  transform: scale(1.05);
 }
 </style>
