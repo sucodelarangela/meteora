@@ -1,7 +1,7 @@
 <template>
   <h2 class="text-center my-4 my-xl-5 section-title">Products that are rocking!</h2>
   <section class="container row mx-auto g-4 px-3 mb-4 mb-xl-5">
-    <div v-for="product in filterProducts" :key="product.id" class="col-12 col-md-6 col-xl-4">
+    <div v-for="product in filterProducts" :key="product.id" class="col-12 col-md-4 col-xl-3">
       <div class="card rounded-0 h-100">
         <img
           :src="product.images[0]"

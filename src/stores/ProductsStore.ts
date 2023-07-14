@@ -31,7 +31,7 @@ export const useProductsStore = defineStore('ProductsStore', {
         .then(responses => {
           const results = responses.map(response => response.data.products);
 
-          results.forEach(res => this.products.push(res[3]));
+          results.forEach(res => this.products.push(...res));
         })
         .catch(error => {
           throw error;
