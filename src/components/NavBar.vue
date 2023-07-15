@@ -2,9 +2,9 @@
   <!-- Código doc bootstrap para edição -->
   <header class="navbar navbar-expand-md navbar-dark bg-black p-0">
     <div class="container-fluid container-lg">
-      <a class="navbar-brand" href="#">
+      <RouterLink to="/" class="navbar-brand" href="#">
         <img src="@/assets/images/logo/logo_white.png" alt="" aria-hidden="true" />
-      </a>
+      </RouterLink>
       <!-- Botão hamburguer mobile -->
       <button
         class="navbar-toggler border-0"
@@ -34,7 +34,9 @@
 
         <ul class="navbar-nav me-auto">
           <li class="nav-item py-2 border-bottom">
-            <a class="nav-link p-0 p-md-2 active" aria-current="page" href="#">Home</a>
+            <RouterLink to="/" class="nav-link p-0 p-md-2" aria-current="page" href="#"
+              >Home</RouterLink
+            >
           </li>
           <li class="nav-item py-2 border-bottom">
             <a class="nav-link p-0 p-md-2" href="#">Our stores</a>
@@ -42,8 +44,11 @@
           <li class="nav-item py-2 border-bottom">
             <a class="nav-link p-0 p-md-2" href="#">News</a>
           </li>
-          <li class="nav-item py-2">
+          <li class="nav-item py-2 border-bottom">
             <a class="nav-link p-0 p-md-2" href="#">Sale items</a>
+          </li>
+          <li class="nav-item py-2">
+            <RouterLink to="/cart" class="nav-link p-0 p-md-2" href="#">Cart</RouterLink>
           </li>
         </ul>
         <!-- Input tablet+ -->
@@ -78,6 +83,7 @@
 </template>
 
 <script setup lang="ts">
+import { RouterLink } from 'vue-router';
 import { useProductsStore } from '../stores/ProductsStore';
 
 const productsStore = useProductsStore();
@@ -107,7 +113,7 @@ const productsStore = useProductsStore();
 
 .nav-link {
   &:hover,
-  &.active {
+  &.router-link-active {
     color: v.$primary-yellow !important;
   }
 }
