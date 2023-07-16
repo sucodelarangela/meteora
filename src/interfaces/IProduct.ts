@@ -10,4 +10,5 @@ export default interface IProduct {
   category: string;
   thumbnail: string;
   images: string[];
+  quantity: number;
 }

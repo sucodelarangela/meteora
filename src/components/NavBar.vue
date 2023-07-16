@@ -48,7 +48,9 @@
             <a class="nav-link p-0 p-md-2" href="#">Sale items</a>
           </li>
           <li class="nav-item py-2">
-            <RouterLink to="/cart" class="nav-link p-0 p-md-2" href="#">Cart</RouterLink>
+            <RouterLink to="/cart" class="nav-link p-0 p-md-2" href="#"
+              >Cart ({{ productsStore.productsInCart.length }})</RouterLink
+            >
           </li>
         </ul>
         <!-- Input tablet+ -->

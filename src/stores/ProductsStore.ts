@@ -7,6 +7,7 @@ export const useProductsStore = defineStore('ProductsStore', {
   state: () => ({
     categories: ['mens-shirts', 'womens-bags', 'mens-shoes', 'womens-dresses', 'mens-watches', 'sunglasses'],
     products: <IProduct[]>[],
+    productsInCart: <IProduct[]>[],
     query: ''
   }),
   getters: {
@@ -37,5 +38,10 @@ export const useProductsStore = defineStore('ProductsStore', {
           throw error;
         });
     },
+    removeFromCart(productId: number) {
+      const updatedCart = this.productsInCart.filter(item => item.id !== productId);
+      this.productsInCart = updatedCart;
+      // localStorage.setItem('productsInCart', JSON.stringify(this.productsInCart));
+    }
   },
 });
