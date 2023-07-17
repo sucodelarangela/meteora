@@ -72,7 +72,6 @@ const orderTotal = () => {
 };
 
 watch(productsInCart.value, () => {
-  console.log(productsInCart.value);
   localStorage.setItem('productsInCart', JSON.stringify(productsInCart.value));
 });
 </script>

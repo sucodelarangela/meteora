@@ -73,8 +73,24 @@
                 </div>
               </div>
               <hr />
-              <h6 class="form-label fw-bold">Sizes:</h6>
-              <div class="container row">
+              <h6
+                class="form-label fw-bold"
+                v-if="
+                  product.category === 'mens-shirts' ||
+                  product.category === 'womens-dresses' ||
+                  product.category === 'mens-shoes'
+                "
+              >
+                Sizes:
+              </h6>
+              <div
+                class="container row"
+                v-if="
+                  product.category === 'mens-shirts' ||
+                  product.category === 'womens-dresses' ||
+                  product.category === 'mens-shoes'
+                "
+              >
                 <div class="form-check col-2 d-flex flex-column align-items-center p-0">
                   <input class="form-check-input mx-0" type="radio" name="sizes" id="size1" />
                   <label class="form-check-label" for="size1">S</label>

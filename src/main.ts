@@ -1,5 +1,13 @@
 import App from './App.vue';
 
+// Service Worker
+import { registerSW } from "virtual:pwa-register";
+
+if ("serviceWorker" in navigator) {
+  // && !/localhost/.test(window.location)) {
+  registerSW();
+}
+
 // Store
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
