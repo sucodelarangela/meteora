@@ -1,6 +1,12 @@
 <template>
   <h2 class="text-center my-4 my-xl-5 section-title">
     Search by category: {{ f$?.formatCategory(productsStore.query) }}
+    <span
+      class="btn btn-sm btn-outline-danger"
+      v-if="productsStore.query"
+      @click="productsStore.query = ''"
+      >Clear filter</span
+    >
   </h2>
   <section class="container row mx-auto g-4 mb-4">
     <div
