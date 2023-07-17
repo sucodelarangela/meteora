@@ -3,19 +3,21 @@
     <div class="items text-center my-4 my-xl-5 mx-auto">
       <template v-if="productsInCart.length">
         <div
-          class="item d-flex justify-content-between position-relative"
+          class="item d-flex justify-content-between position-relative row"
           v-for="(product, index) in productsInCart"
           :key="index"
         >
           <div
-            class="remove position-absolute text-decoration-underline"
+            class="remove position-absolute text-decoration-underline text-end"
             @click="removeProductFromCart(product.id)"
           >
             Remover Produto
           </div>
-          <div class="photo"><img :src="product.images[0]" :alt="product.title" /></div>
-          <div class="fw-bold">{{ product.title }}</div>
-          <div class="quantities">
+          <div class="photo col-4 col-md-3">
+            <img :src="product.images[0]" :alt="product.title" />
+          </div>
+          <div class="fw-bold col-8 col-md-5">{{ product.title }}</div>
+          <div class="quantities col-12 col-md-4 mt-2 mt-md-0">
             <span class="quantity-area d-inline-flex justify-content-between align-items-center">
               <button
                 class="btn btn-sm btn-outline-secondary d-inline-flex justify-content-center align-items-center p-2"
