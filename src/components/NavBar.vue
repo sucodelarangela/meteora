@@ -39,13 +39,7 @@
             >
           </li>
           <li class="nav-item py-2 border-bottom">
-            <a class="nav-link p-0 p-md-2" href="#">Our stores</a>
-          </li>
-          <li class="nav-item py-2 border-bottom">
-            <a class="nav-link p-0 p-md-2" href="#">News</a>
-          </li>
-          <li class="nav-item py-2 border-bottom">
-            <a class="nav-link p-0 p-md-2" href="#">Sale items</a>
+            <RouterLink to="/about" class="nav-link p-0 p-md-2" href="#">About</RouterLink>
           </li>
           <li class="nav-item py-2">
             <RouterLink to="/cart" class="nav-link p-0 p-md-2" href="#"
