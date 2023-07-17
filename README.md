@@ -17,6 +17,7 @@ As tecnologias e linguagens utilizadas nesse desafio foram:
   <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
   <img src="https://img.shields.io/badge/bootstrap 5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=ffffff">
   <img src="https://img.shields.io/badge/sass-f8f9fa?style=for-the-badge&logo=sass&logoColor=CC6699">
+  <img src="https://img.shields.io/badge/vite pwa plugin-1e1e20?style=for-the-badge">
 </div>
 
 > Você pode saber um pouco mais como funcionam os _challenges_ da Alura visitando a seção [**🦾 Sobre o desafio**](#challenge).
@@ -25,7 +26,7 @@ As tecnologias e linguagens utilizadas nesse desafio foram:
 | 🪧 Vitrine Dev |  |
 | ------------- | - |
 | ✨ Nome       | **Meteora - Ecommerce** - Challenge Alura |
-| 🏷️ Tecnologias | Vue 3, Vite, Pinia, TypeScript, Bootstrap 5, Sass |
+| 🏷️ Tecnologias | Vue 3, Vite, Pinia, TypeScript, Bootstrap 5, Sass, Vite-Pwa-Plugin |
 | 🚀 URL         | **https://meteorastore.vercel.app/** |
 | 🔥 Desafio     | [**Design no Figma**](https://www.figma.com/file/0mR3RFueSiD6pP3B1VUG8U/Challenge-Front-end-%7C-Loja-Meteora-(Copy)?node-id=2386%3A2430&mode=dev) |
 
@@ -55,7 +56,7 @@ _English version_
 
 ## 🔎 Overview
 
-**Meteora** is a fictional timeless, casua, no-gender clothes e-commerce tha believes fashion is much more than just passing trends and offers versatile pieces that adapt to any style and occasion. This project is being developed as a result of a Front-End Challenge (7th edition) exclusively for students of [Alura](https://www.alura.com.br) tech school.
+**Meteora** is a fictional timeless, casual, no-gender clothes e-commerce tha believes fashion is much more than just passing trends and offers versatile pieces that adapt to any style and occasion. This project is being developed as a result of a Front-End Challenge (7th edition) exclusively for students of [Alura](https://www.alura.com.br) tech school.
 
 The stack used in this challenge was:
 
