@@ -1,34 +1,62 @@
 <template>
   <section class="basket container mx-auto g-4 px-3 mb-4 mb-xl-5">
-    <div class="text-center my-4 my-xl-5 section-title">
+    <div class="items text-center my-4 my-xl-5 mx-auto">
       <template v-if="productsInCart.length">
-        <div class="item" v-for="(product, index) in productsInCart" :key="index">
-          <div class="remove" @click="removeProduct(product.id)">Remover Produto</div>
+        <div
+          class="item d-flex justify-content-between position-relative"
+          v-for="(product, index) in productsInCart"
+          :key="index"
+        >
+          <div
+            class="remove position-absolute text-decoration-underline"
+            @click="removeProductFromCart(product.id)"
+          >
+            Remover Produto
+          </div>
           <div class="photo"><img :src="product.images[0]" :alt="product.title" /></div>
-          <div class="description">{{ product.title }}</div>
-          <div class="price">
-            <span class="quantity-area">
-              <button :disabled="product.quantity <= 1" @click="product.quantity--">-</button>
-              <span class="quantity">{{ product.quantity }}</span>
-              <button @click="product.quantity++">+</button>
+          <div class="fw-bold">{{ product.title }}</div>
+          <div class="quantities">
+            <span class="quantity-area d-inline-flex justify-content-between align-items-center">
+              <button
+                class="btn btn-sm btn-outline-secondary d-inline-flex justify-content-center align-items-center p-2"
+                :disabled="product.quantity <= 1"
+                @click="product.quantity--"
+              >
+                -
+              </button>
+              <span class="fs-6 align-middle">{{ product.quantity }}</span>
+              <button
+                class="btn btn-sm btn-outline-secondary d-inline-flex justify-content-center align-items-center p-2"
+                @click="product.quantity++"
+              >
+                +
+              </button>
             </span>
-            <span class="amount">R$ {{ (product.price * product.quantity).toFixed(2) }}</span>
+            <span class="product-total d-inline-flex justify-content-end fs-6 ms-2">
+              US$ {{ (product.price * product.quantity).toFixed(2) }}
+            </span>
           </div>
         </div>
-        <div class="grand-total">Total do pedido: R$ {{ orderTotal() }}</div>
+        <div class="grand-total fs-5 fw-bold text-end mt-2">
+          Order total: US$ {{ orderTotal() }}
+        </div>
       </template>
-      <h4 v-else>Nenhum item no carrinho.</h4>
+      <h4 v-else>No items in shop cart :(</h4>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { storeToRefs } from 'pinia';
 import { useProductsStore } from '../stores/ProductsStore';
 import type IProduct from '@/interfaces/IProduct';
+import { watch } from 'vue';
 
-const { productsInCart, removeFromCart } = useProductsStore();
+const productsStore = useProductsStore();
+const { removeFromCart } = useProductsStore();
+const { productsInCart } = storeToRefs(productsStore);
 
-const removeProduct = (productId: number) => {
+const removeProductFromCart = (productId: number) => {
   if (confirm('Você tem certeza que quer remover o item do carrinho?')) {
     removeFromCart(productId);
   }
@@ -37,82 +65,54 @@ const removeProduct = (productId: number) => {
 const orderTotal = () => {
   let total = 0;
 
-  productsInCart.forEach((item: IProduct) => {
+  productsInCart.value.forEach((item: IProduct) => {
     total += item.price * item.quantity;
   });
   return total.toFixed(2);
 };
+
+watch(productsInCart.value, () => {
+  console.log(productsInCart.value);
+  localStorage.setItem('productsInCart', JSON.stringify(productsInCart.value));
+});
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/styles/variables' as v;
+
 .basket {
   min-height: 12.5rem;
+}
 
-  .items {
-    max-width: 800px;
-    margin: 0 auto;
+.items {
+  max-width: 50rem;
+}
 
-    .item {
-      display: flex;
-      justify-content: space-between;
-      padding: 40px 0;
-      border-bottom: 1px solid lightgrey;
-      position: relative;
+.item {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid v.$gray-500;
 
-      .remove {
-        position: absolute;
-        top: 8px;
-        right: 0;
-        font-size: 11px;
-        text-decoration: underline;
-        cursor: pointer;
-      }
+  .remove {
+    top: 0.5rem;
+    right: 0;
+    font-size: 11px;
+    cursor: pointer;
+  }
 
-      .quantity-area {
-        margin: 8px auto;
-        height: 14px;
-
-        button {
-          width: 16px;
-          height: 16px;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-        }
-
-        .quantity {
-          margin: 0 4px;
-        }
-      }
-
-      .photo {
-        img {
-          max-width: 80px;
-        }
-      }
-
-      .description {
-        padding-left: 30px;
-        box-sizing: border-box;
-        max-width: 50%;
-      }
-
-      .price {
-        .amount {
-          font-size: 16px;
-          margin-left: 8px;
-          vertical-align: middle;
-        }
-      }
-    }
-
-    .grand-total {
-      font-size: 24px;
-      font-weight: bold;
-      text-align: right;
-      margin-top: 8px;
+  .quantity-area {
+    width: 5rem;
+    button {
+      width: 16px;
+      height: 16px;
     }
   }
+
+  .photo > img {
+    max-width: 5rem;
+  }
+}
+
+.product-total {
+  width: 6.5rem;
 }
 </style>

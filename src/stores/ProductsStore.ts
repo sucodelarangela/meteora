@@ -38,10 +38,19 @@ export const useProductsStore = defineStore('ProductsStore', {
           throw error;
         });
     },
+    addToCart(product: IProduct) {
+      this.productsInCart.push(product);
+      localStorage.setItem('productsInCart', JSON.stringify(this.productsInCart));
+    },
     removeFromCart(productId: number) {
       const updatedCart = this.productsInCart.filter(item => item.id !== productId);
       this.productsInCart = updatedCart;
-      // localStorage.setItem('productsInCart', JSON.stringify(this.productsInCart));
-    }
+      localStorage.setItem('productsInCart', JSON.stringify(this.productsInCart));
+    },
+    loadCart() {
+      if (localStorage.getItem('productsInCart')) {
+        this.productsInCart = JSON.parse(localStorage.getItem('productsInCart') || '');
+      }
+    },
   },
 });

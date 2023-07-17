@@ -98,10 +98,19 @@
               </div>
               <div class="modal-footer border-0 justify-content-start">
                 <button
+                  v-if="!isInCart(product)"
+                  @click="addProductToCart(product)"
                   type="button"
                   class="btn btn-primary btn-purple rounded-0 border-0 fw-medium"
                 >
                   Add to cart
+                </button>
+                <button
+                  v-else
+                  type="button"
+                  class="btn btn-primary btn-purple rounded-0 border-0 fw-medium"
+                >
+                  Remove from cart
                 </button>
               </div>
             </div>
@@ -113,7 +122,21 @@
 </template>
 
 <script lang="ts" setup>
+import { useProductsStore } from '../stores/ProductsStore';
+import type IProduct from '@/interfaces/IProduct';
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps(['product']);
+const { productsInCart, addToCart } = useProductsStore();
+
+const addProductToCart = (product: IProduct) => {
+  product.quantity = 1;
+  addToCart(product);
+};
+
+const isInCart = (product: IProduct) => {
+  return productsInCart.find((item) => item.id === product.id);
+};
 </script>
 
 <style lang="scss" scoped>

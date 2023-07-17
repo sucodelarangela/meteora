@@ -36,7 +36,7 @@
 <script setup lang="ts">
 import ProductModal from './ProductModal.vue';
 import { useProductsStore } from '../stores/ProductsStore';
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import type IProduct from '@/interfaces/IProduct';
 import type { Ref } from 'vue';
 import { storeToRefs } from 'pinia';
@@ -49,12 +49,6 @@ const selectedId: Ref<IProduct | undefined> = ref();
 const openModal = (product: IProduct) => {
   selectedId.value = product;
 };
-
-onMounted(() => {
-  productsStore.fetchProducts().catch((error: any) => {
-    console.log(error.message);
-  });
-});
 </script>
 
 <style lang="scss" scoped>
