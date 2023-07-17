@@ -65,6 +65,7 @@ The stack used in this challenge was:
   <img src="https://img.shields.io/badge/vite-1e1e20?style=for-the-badge&logo=vite&logoColor=646CFF"/>
   <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
   <img src="https://img.shields.io/badge/bootstrap 5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=ffffff">
+  <img src="https://img.shields.io/badge/vite pwa plugin-1e1e20?style=for-the-badge">
 </div>
 
 ## 🦾 About the challenge
