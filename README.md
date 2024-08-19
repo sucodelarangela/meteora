@@ -30,7 +30,7 @@ As tecnologias e linguagens utilizadas nesse desafio foram:
 | 🚀 URL         | **https://meteorastore.vercel.app/** |
 | 🔥 Desafio     | [**Design no Figma**](https://www.figma.com/file/0mR3RFueSiD6pP3B1VUG8U/Challenge-Front-end-%7C-Loja-Meteora-(Copy)?node-id=2386%3A2430&mode=dev) |
 
-![](./public/ogimage.png#vitrinedev)
+![](./public/og-image.png#vitrinedev)
 
 <div id="challenge"></div>
 
